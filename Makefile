@@ -7,7 +7,7 @@ NAME = libftprintf.a
 
 all:	$(NAME)
 
-$(NAME):	$(OBJECT)
+$(NAME):	libft/libft.a	$(OBJECT)
 	ar -rcs $(NAME) $(SRC)
 
 $(OBJECT):	$(SRC)
