@@ -6,15 +6,15 @@
 /*   By: dalves-s <dalves-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/21 21:26:46 by dalves-s          #+#    #+#             */
-/*   Updated: 2021/07/22 21:22:36 by dalves-s         ###   ########.fr       */
+/*   Updated: 2021/07/24 18:37:05 by dalves-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void		ft_print_hexa(unsigned long long int num, char *base)
+void	ft_print_hexa(unsigned long long int num, char *base)
 {
-	int len_base;
+	int		len_base;
 
 	len_base = ft_strlen(base);
 	if (num / len_base > 0)
@@ -24,7 +24,7 @@ void		ft_print_hexa(unsigned long long int num, char *base)
 
 void	ft_hex(unsigned int num, char *base, t_menbers *runner)
 {
-	int len_base;
+	int		len_base;
 
 	len_base = ft_strlen(base);
 	if (num / len_base > 0)
