@@ -64,7 +64,7 @@ $(OBJ_BONUS):	$(BONUS)
 	$(GCC) $(FLAGS) -c $(BONUS)
 
 clean:
-	rm -f $(OBJECT) a.out
+	rm -f $(OBJECT) $(OBJ_BONUS)
 
 fclean:	clean
 	rm -f $(NAME)

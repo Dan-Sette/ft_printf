@@ -1,5 +1,7 @@
 SRC =	ft_printf.c ft_putstr_printf.c ft_p_hexa.c
 
+LIBFT = libft/libft.a
+
 CC = clang
 FLAGS = -Wall -Wextra -Werror
 OBJECT = $(SRC:.c=.o)
@@ -7,14 +9,19 @@ NAME = libftprintf.a
 
 all:	$(NAME)
 
-$(NAME):	libft/libft.a	$(OBJECT)
-	ar -rcs $(NAME) $(SRC)
+$(NAME):	$(LIBFT) $(OBJECT)
+	@cp $(LIBFT) $(NAME)
+	ar -rcs $(NAME) $(OBJECT)
 
 $(OBJECT):	$(SRC)
 	$(CC) $(FLAGS) -c $(SRC)
 
+$(LIBFT):
+	$(MAKE) -C ./libft
+
 clean:
-	rm -f $(OBJECT) a.out
+	rm -f $(OBJECT)
+	$(MAKE) fclean -C ./libft
 
 fclean:	clean
 	rm -f $(NAME)
