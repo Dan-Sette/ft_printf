@@ -6,7 +6,7 @@
 /*   By: dalves-s <dalves-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/14 12:09:18 by dalves-s          #+#    #+#             */
-/*   Updated: 2021/07/24 18:45:46 by dalves-s         ###   ########.fr       */
+/*   Updated: 2021/07/24 23:02:38 by dalves-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ void	ft_conversion(va_list args, t_menbers *runner)
 	else if (runner->character == 'p')
 	{
 		ft_putstr_fd("0x", 1);
-		ft_p_hexa(va_arg(args, unsigned long long int), "0123456789abcdef");
-		runner->length += 13;
+		hexa(va_arg(args, unsigned long long int), "0123456789abcdef", runner);
+		runner->length += 2;
 	}
 	else if (runner->character == 'd' || runner->character == 'i')
 	{

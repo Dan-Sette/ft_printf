@@ -1,4 +1,4 @@
-SRC =	ft_printf.c ft_putstr_printf.c ft_p_hexa.c
+SRC =	ft_printf.c ft_putstr_printf.c hexa.c
 
 LIBFT = libft/libft.a
 
